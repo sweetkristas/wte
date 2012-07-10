@@ -15,6 +15,7 @@
 #include <boost/bind.hpp>
 #include <boost/algorithm/string.hpp>
 #include <iostream>
+#include <string>
 #include <stack>
 #include <cmath>
 #include <cstdlib>
@@ -1230,7 +1231,7 @@ END_FUNCTION_DEF(decompress)
 	private:
 		variant execute(const formula_callable& variables) const {
 			formula::fail_if_static_context();
-			const intptr_t id = intptr_t(std::stoll(args()[0]->evaluate(variables).as_string().c_str(), NULL, 16));
+			const intptr_t id = intptr_t(std::strtol(args()[0]->evaluate(variables).as_string().c_str(), NULL, 16));
 			return variant::create_variant_under_construction(id);
 		}
 	};

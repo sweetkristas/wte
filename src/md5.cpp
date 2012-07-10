@@ -35,7 +35,7 @@ std::string sum(const std::string& data)
 	std::string output;
 	for(std::string::const_iterator i = result.begin(); i != result.end(); ++i) {
 		std::ostringstream ss;
-		ss << std::hex << std::setw(2) << std::setfill('0') << int(unsigned char(*i)) << std::dec;
+		ss << std::hex << std::setw(2) << std::setfill('0') << *i << std::dec;
 		output += ss.str();
 	}
 

@@ -2,6 +2,8 @@
 #include <boost/regex.hpp>
 #include <boost/filesystem.hpp>
 
+#include<fstream>
+
 #include "asserts.hpp"
 #include "filesystem.hpp"
 #include "foreach.hpp"
